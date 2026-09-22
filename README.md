@@ -92,3 +92,14 @@ When explaining the code to another person, use this simple mapping:
 | A proof that a rule works | a test in `calculator-engine.test.js` |
 
 The full ICM reasoning trail lives in [`icm/ICM.md`](./icm/ICM.md).
+
+## Project documentation
+
+If you want to understand how the project was shaped, the `icm/` folder follows the work from research to scope, architecture, implementation, and validation:
+
+- [`01-research.md`](./icm/01-research.md) explains the platform rules and behavior assumptions.
+- [`02-scope.md`](./icm/02-scope.md) lists what the app promises and what remains outside the first version.
+- [`03-architecture.md`](./icm/03-architecture.md) explains which part of the code owns each responsibility.
+- [`04-implementation-map.md`](./icm/04-implementation-map.md) maps user actions to functions and tests.
+- [`05-validation-report.md`](./icm/05-validation-report.md) records the checks and their results.
+- [`06-eem-work-record.md`](./icm/06-eem-work-record.md) shows EEM applied to a small change.

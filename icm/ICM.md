@@ -7,27 +7,34 @@ status: complete-with-explicit-scope
 
 # ICM — Reverse-Engineered Calculator
 
-ICM here means Interpretable Context Methodology: every implementation decision is connected to a visible requirement, a small code boundary, and an observable check.
+ICM means **Interpretable Context Methodology** in this project. The idea is simple: connect each important product decision to a small part of the code and to a check that can show whether the behavior works.
 
-## Pipeline
+## How the project is organized
 
-| Stage | Question | Output | Gate |
-| --- | --- | --- | --- |
-| 01 Research | What behaviors and platform rules matter? | `01-research.md` | Sources and assumptions are separated |
-| 02 Scope | What exactly is in the first version? | `02-scope.md` | Every promise has an acceptance check |
-| 03 Architecture | Where should each rule live? | `03-architecture.md` | UI and engine responsibilities do not leak |
-| 04 Implementation | Did each required action become a named function? | `04-implementation-map.md` | Function map matches the product behavior |
-| 05 Validation | Does the result work and remain understandable? | `05-validation-report.md` | Tests and manual checks agree with the claims |
+The documents follow the same order as the work:
 
-## Context loading rule
+| Stage | Plain-language question | Document | Gate |
+|---|---|---|---|
+| 01 Research | What behavior and platform rules do we need to understand? | `01-research.md` | Sources and assumptions are clearly separated |
+| 02 Scope | What belongs in this version, and what does not? | `02-scope.md` | Every promise has an acceptance check |
+| 03 Architecture | Which part of the code should own each rule? | `03-architecture.md` | UI and calculator rules stay separate |
+| 04 Implementation | Did each user action become a named function? | `04-implementation-map.md` | The function map matches the product behavior |
+| 05 Validation | Does the result work and remain understandable? | `05-validation-report.md` | Tests and manual checks support the claims |
+| 06 EEM work record | Can we follow one change from its goal to its evidence? | `06-eem-work-record.md` | The change has a clear contract and status |
 
-Each stage reads the previous stage’s handoff plus only the references it needs. Facts, decisions, assumptions, and open questions are labeled rather than blended together.
+## How to read the documents
 
-## Final context
+Read them from Stage 01 to Stage 05 to understand the original project. Read Stage 06 to see the same project use the Explainable Engineering Method for a later change.
+
+Each stage uses the previous stage's handoff and only the references it needs. Facts, decisions, assumptions, and open questions are labeled instead of being mixed together.
+
+## Current picture of the app
 
 - The app is a client-side static web app.
-- It uses a pure state-transition engine plus a DOM adapter.
-- It intentionally models a basic pocket calculator, not a full expression parser.
+- A pure state-transition engine holds the calculator rules.
+- A DOM adapter connects those rules to the browser page.
+- The app intentionally behaves like a basic pocket calculator rather than a full expression parser.
 - The supported behavior and exclusions are in [`02-scope.md`](./02-scope.md).
 - The function ownership map is in [`04-implementation-map.md`](./04-implementation-map.md).
-- The evidence is in [`05-validation-report.md`](./05-validation-report.md).
+- Automated and manual evidence is in [`05-validation-report.md`](./05-validation-report.md).
+- The EEM example record is in [`06-eem-work-record.md`](./06-eem-work-record.md).

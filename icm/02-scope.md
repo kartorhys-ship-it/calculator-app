@@ -1,49 +1,52 @@
-# Stage 02 — Scope and Acceptance
+# Stage 02 — Scope and acceptance
+
+This stage defines what the first version promises. A feature belongs in the scope only when we can describe how to recognize that it works.
 
 ## Goal
 
-Build a polished, browser-based, four-function calculator whose behavior can be understood from small, named functions.
+Build a polished browser calculator with four basic operations. Keep the behavior visible through small, named functions so another person can follow the code.
 
-## In scope
+## Included in this version
 
-- Digits 0–9
+- Digits `0`–`9`
 - Decimal point
-- Addition, subtraction, multiplication, division
+- Addition, subtraction, multiplication, and division
 - Equals and repeated equals
-- Clear, delete, sign toggle, percent
-- Keyboard input
-- `C`/`c` keyboard shortcut for clearing the current calculation
-- Error state for division by zero and non-finite results
-- Session calculation history
-- Responsive and keyboard-visible UI
+- Clear, delete, sign toggle, and percent
+- Keyboard input, including `C`/`c` to clear the current calculation
+- A readable error for division by zero and non-finite results
+- Calculation history for the current browser session
+- A responsive layout with visible keyboard and focus behavior
 - Unit tests for the pure calculator engine
 
-## Explicit non-goals
+## Deliberately outside this version
 
 - Full expression parsing or parentheses
 - Scientific functions
 - Memory registers
 - Database or server storage
 - User accounts
-- Cross-session history persistence
-- Multiple locales
+- History that survives a new browser session
+- Multiple display locales
 
-## Guarantee statement
+## What the app guarantees
 
-The app guarantees correct behavior for the listed four operations and input actions within normal JavaScript numeric limits. It does not promise arbitrary-precision math or algebraic operator precedence.
+Within normal JavaScript number limits, the app aims to handle the listed operations and input actions correctly. It does not promise arbitrary-precision mathematics or the operator precedence used by a full algebraic expression parser.
 
 ## Acceptance checks
 
-1. A user can enter `12.5 + 7.5 =` and see `20`.
-2. A user can enter `8 + 2 × 3 =` and see `30`, matching the documented entry-order rule.
+These are the observable checks used to decide whether the scope is met:
+
+1. Entering `12.5 + 7.5 =` shows `20`.
+2. Entering `8 + 2 × 3 =` shows `30`, following the documented entry-order rule.
 3. Pressing equals twice repeats the last operation.
 4. A second decimal point is ignored.
 5. Delete removes the last typed character.
 6. Percent changes `25` to `0.25`.
 7. Sign changes `12` to `-12`.
-8. `9 ÷ 0 =` shows a readable error and does not show `Infinity`.
+8. `9 ÷ 0 =` shows a readable error rather than `Infinity`.
 9. Keyboard and mouse input produce the same engine results.
-10. Completed calculations appear in session history and can be cleared.
+10. Completed calculations appear in session history and the history can be cleared.
 11. `npm test` passes from the app folder.
 12. The page remains usable on narrow screens and shows a visible focus ring.
 13. Pressing `C` or `c` clears the current calculation without clearing session history.
