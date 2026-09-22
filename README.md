@@ -2,6 +2,12 @@
 
 Orbit Calculator is a small, browser-based four-function calculator built as a reverse-engineering exercise. The implementation is intentionally plain HTML, CSS, and JavaScript so the behavior is visible instead of hidden behind a framework.
 
+## Live demo
+
+Open the calculator in your browser: **[Launch Orbit Calculator](https://kartorhys-ship-it.github.io/calculator-app/)**
+
+No installation is needed for the live version. It is published from this repository with GitHub Pages.
+
 ## AI use disclosure
 
 I used AI assistance to research, plan, implement, test, document, and present this project. I directed the scope and reviewed the resulting code, behavior, documentation, and UI. The automated tests and manual browser checks recorded in this repository are part of that review.
