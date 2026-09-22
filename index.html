@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark light" />
+    <title>Orbit Calculator</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="app-header">
+        <div>
+          <p class="eyebrow">A small, inspectable calculator</p>
+          <h1>Orbit Calculator</h1>
+        </div>
+        <p class="header-note">Four operations, clear rules, zero mystery.</p>
+      </header>
+
+      <section class="calculator-card" aria-labelledby="calculator-title">
+        <h2 id="calculator-title" class="sr-only">Calculator</h2>
+
+        <div class="display-panel" aria-live="polite" aria-atomic="true">
+          <p id="expression-display" class="expression-display">Ready for input</p>
+          <p id="display-value" class="display-value" aria-label="Calculator display">0</p>
+          <p id="status-message" class="sr-only" role="status"></p>
+        </div>
+
+        <div class="calculator-body">
+          <div class="keypad" role="group" aria-label="Calculator keypad">
+            <button class="key key-secondary" type="button" data-action="clear" aria-label="Clear calculator">AC</button>
+            <button class="key key-secondary" type="button" data-action="delete" aria-label="Delete last digit">DEL</button>
+            <button class="key key-secondary" type="button" data-action="percent" aria-label="Percent">%</button>
+            <button class="key key-operator" type="button" data-action="operator" data-value="divide" aria-label="Divide">÷</button>
+
+            <button class="key" type="button" data-action="digit" data-value="7">7</button>
+            <button class="key" type="button" data-action="digit" data-value="8">8</button>
+            <button class="key" type="button" data-action="digit" data-value="9">9</button>
+            <button class="key key-operator" type="button" data-action="operator" data-value="multiply" aria-label="Multiply">×</button>
+
+            <button class="key" type="button" data-action="digit" data-value="4">4</button>
+            <button class="key" type="button" data-action="digit" data-value="5">5</button>
+            <button class="key" type="button" data-action="digit" data-value="6">6</button>
+            <button class="key key-operator" type="button" data-action="operator" data-value="subtract" aria-label="Subtract">−</button>
+
+            <button class="key" type="button" data-action="digit" data-value="1">1</button>
+            <button class="key" type="button" data-action="digit" data-value="2">2</button>
+            <button class="key" type="button" data-action="digit" data-value="3">3</button>
+            <button class="key key-operator" type="button" data-action="operator" data-value="add" aria-label="Add">+</button>
+
+            <button class="key key-secondary" type="button" data-action="sign" aria-label="Toggle positive or negative">±</button>
+            <button class="key" type="button" data-action="digit" data-value="0">0</button>
+            <button class="key" type="button" data-action="decimal" aria-label="Decimal point">.</button>
+            <button class="key key-equals" type="button" data-action="equals" aria-label="Calculate result">=</button>
+          </div>
+
+          <aside class="history-panel" aria-labelledby="history-title">
+            <div class="history-heading">
+              <div>
+                <p class="eyebrow">Session memory</p>
+                <h3 id="history-title">History</h3>
+              </div>
+              <button class="text-button" type="button" data-action="clear-history">Clear</button>
+            </div>
+            <div id="history-list" class="history-list">
+              <p class="empty-history">Your completed calculations will appear here.</p>
+            </div>
+          </aside>
+        </div>
+
+        <footer class="calculator-footer">
+          <span>Tip: use your keyboard</span>
+          <span class="key-hint">Enter = calculate</span>
+          <span class="key-hint">Esc = clear</span>
+          <span class="key-hint">Backspace = delete</span>
+          <span class="ai-disclosure">Built with AI assistance · reviewed and tested by the author</span>
+        </footer>
+      </section>
+    </main>
+
+    <script type="module" src="./src/app.js"></script>
+  </body>
+</html>

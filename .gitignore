@@ -1,0 +1,12 @@
+# Temporary presentation build artifacts
+presentation-build/
+
+# Superseded deck revisions
+presentation-output/orbit-calculator-codebase-overview.pptx
+presentation-output/orbit-calculator-codebase-overview-v1.pptx
+presentation-output/orbit-calculator-codebase-overview-v2.pptx
+presentation-output/orbit-calculator-codebase-overview-v3.pptx
+
+# Common local files
+node_modules/
+.DS_Store
