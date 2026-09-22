@@ -40,7 +40,7 @@ npm test
 - Delete the last typed character
 - Clear the current calculation
 - Repeated equals repeats the last operation
-- Keyboard input: digits, `.`, `+`, `-`, `*`, `/`, `%`, `Enter`, `Escape`, `Delete`, and `Backspace`
+- Keyboard input: digits, `.`, `+`, `-`, `*`, `/`, `%`, `Enter`, `Escape`, `Delete`, `Backspace`, and `C`/`c` to clear
 - A session-only calculation history
 - Division-by-zero and non-finite result errors
 

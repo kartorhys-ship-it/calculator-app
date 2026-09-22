@@ -8,7 +8,7 @@
 | Add decimal point | `inputDecimal` | keypad `data-action="decimal"` or `.` key | one-decimal test |
 | Choose operation | `chooseOperator` | operator button or `+ - * /` key | chaining test |
 | Calculate | `calculateResult` | equals button or Enter | arithmetic and repeat-equals tests |
-| Clear | `clearCalculator` | AC, Escape, Delete | reset test |
+| Clear | `clearCalculator` | AC, Escape, Delete, C/c | reset and keyboard clear tests |
 | Delete one character | `deleteLastCharacter` | DEL, Backspace | delete test |
 | Change sign | `toggleSign` | ± button | sign test |
 | Apply percent | `applyPercent` | % button or `%` key | percent test |

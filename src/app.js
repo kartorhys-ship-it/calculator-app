@@ -52,7 +52,7 @@ function handleButtonClick(event) {
 function handleKeyboardInput(event) {
   const key = event.key;
   const isSupportedKey = /^\d$/.test(key)
-    || [".", ",", "+", "-", "*", "x", "X", "/", "÷", "Enter", "=", "Escape", "Delete", "Backspace", "%"].includes(key);
+    || [".", ",", "+", "-", "*", "x", "X", "/", "÷", "Enter", "=", "Escape", "Delete", "Backspace", "%", "c", "C"].includes(key);
 
   if (!isSupportedKey) {
     return;

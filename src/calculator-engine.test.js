@@ -113,6 +113,19 @@ test("keyboard input maps to the same engine actions as buttons", () => {
   assert.equal(state.currentInput, "13");
 });
 
+test("C and c clear the current calculation through the keyboard path", () => {
+  let state = typeDigits(createInitialState(), "42");
+  state = pressKey(state, "+");
+  state = pressKey(state, "C");
+
+  assert.deepEqual(state, createInitialState());
+
+  state = typeDigits(state, "17");
+  state = pressKey(state, "c");
+
+  assert.deepEqual(state, createInitialState());
+});
+
 test("formats typed values without losing a trailing decimal", () => {
   assert.equal(formatEntryValue("1234"), "1,234");
   assert.equal(formatEntryValue("1234.5"), "1,234.5");

@@ -8,7 +8,7 @@ Command:
 npm test
 ```
 
-Observed result on 2026-09-22: 10 tests passed, 0 failed.
+Observed result on 2026-09-22: 11 tests passed, 0 failed.
 
 The engine test suite covers:
 
@@ -21,6 +21,7 @@ The engine test suite covers:
 - Division-by-zero error handling
 - Clear, delete, sign, and percent
 - Keyboard mapping
+- `C`/`c` clear shortcut
 - Display formatting
 
 ## Manual validation checklist
@@ -44,7 +45,7 @@ The engine test suite covers:
 | Sign toggle | Implemented | engine test |
 | Delete and clear | Implemented | engine test + UI controls |
 | Repeated equals | Implemented | engine test |
-| Keyboard input | Implemented | `pressKey` test + event map |
+| Keyboard input | Implemented | `pressKey` test + event map, including `C`/`c` clear |
 | Error state | Implemented | division-by-zero test |
 | Session history | Implemented | app state + history rendering |
 | Scientific math | Unsupported | explicitly out of scope |

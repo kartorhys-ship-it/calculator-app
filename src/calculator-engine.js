@@ -315,7 +315,7 @@ export function pressKey(state, key) {
     return calculateResult(state);
   }
 
-  if (key === "Escape" || key === "Delete") {
+  if (key === "Escape" || key === "Delete" || key === "c" || key === "C") {
     return clearCalculator();
   }
 

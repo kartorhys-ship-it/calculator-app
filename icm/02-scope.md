@@ -12,6 +12,7 @@ Build a polished, browser-based, four-function calculator whose behavior can be 
 - Equals and repeated equals
 - Clear, delete, sign toggle, percent
 - Keyboard input
+- `C`/`c` keyboard shortcut for clearing the current calculation
 - Error state for division by zero and non-finite results
 - Session calculation history
 - Responsive and keyboard-visible UI
@@ -45,3 +46,4 @@ The app guarantees correct behavior for the listed four operations and input act
 10. Completed calculations appear in session history and can be cleared.
 11. `npm test` passes from the app folder.
 12. The page remains usable on narrow screens and shows a visible focus ring.
+13. Pressing `C` or `c` clears the current calculation without clearing session history.
